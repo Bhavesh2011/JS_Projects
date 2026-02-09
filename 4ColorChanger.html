@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        body{text-align:center;margin-top:100px;font-family: Arial;}
+        button{padding: 10px 25px;font-size:16px;}
+    </style>
+</head>
+<body>
+    <h2>
+        Click to change background Color
+    </h2>
+    <button onclick="changeColor()"> change Color</button>
+
+    <script>
+        function changeColor(){
+            const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);   
+                      // Math.floor is for Removing decimal part
+                      // .toString is for Converting number to hexadecimal
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
